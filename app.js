@@ -9,14 +9,14 @@ let totalSeconds = (hourSeconds + minuteSeconds + seconds)
 function isDayLight() {
   if (moment().isDST("YYYY, M, D") == false) {
     return ("is not ");
-  } else if (moment().isDST("YYYY, M, D") == true)
+  } else (moment().isDST("YYYY, M, D") == true)
     return ("is ")
 }
 
 function isLeapYear() {
   if (moment().isLeapYear("YYYY, M, D") == false) {
     return ("is not ");
-  } else if (moment().isLeapYear("YYYY, M, D") == true)
+  } else (moment().isLeapYear("YYYY, M, D") == true)
     return ("is ")
 }
 
