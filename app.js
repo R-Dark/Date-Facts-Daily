@@ -8,19 +8,17 @@ let totalSeconds = (hourSeconds + minuteSeconds + seconds)
 
 function isDayLight() {
   if (moment().isDST("YYYY, M, D") == false) {
-    return ("not daylight savings time");
+    return ("is not ");
   } else if (moment().isDST("YYYY, M, D") == true)
-    return ("during daylight savings time")
+    return ("is ")
 }
 
 function isLeapYear() {
   if (moment().isLeapYear("YYYY, M, D") == false) {
-    return ("is ");
+    return ("is not ");
   } else if (moment().isLeapYear("YYYY, M, D") == true)
-    return ("is not ")
+    return ("is ")
 }
-
-
 
 console.log("It is " + colors.blue(moment().format("MMMM Do YYYY, h:mm:ss a")));
 
@@ -28,6 +26,6 @@ console.log("It is the " + colors.magenta(moment().format('DDDo')) + " day of th
 
 console.log("It is " + colors.cyan(totalSeconds) + " seconds into the day.");
 
-console.log("It " + colors.green("is ") + isDayLight());
+console.log("It " + colors.green(isDayLight()) + "during daylight savings time.");
 
 console.log("It " + colors.red(isLeapYear()) + "a leap year");
